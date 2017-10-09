@@ -1,0 +1,207 @@
+@mixin rounded( $a : 5px, $b : false, $c : false, $d : false ){
+	@if $b == false {
+		-webkit-border-radius: $a;
+		-moz-border-radius: $a;
+		border-radius: $a;
+	} @else {
+		@if $a == $c {
+			@if $b == $d {
+				@if $a == $b {
+					-webkit-border-radius: $a;
+					-moz-border-radius: $a;
+					border-radius: $a;
+				} @else {
+					-webkit-border-top-left-radius: $a;
+					-webkit-border-top-right-radius: $b;
+					-webkit-border-bottom-right-radius: $c;
+					-webkit-border-bottom-left-radius: $d;
+					-moz-border-radius: $a $b;
+					border-radius: $a $b;
+				}
+			} @else {
+				-webkit-border-top-left-radius: $a;
+				-webkit-border-top-right-radius: $b;
+				-webkit-border-bottom-right-radius: $c;
+				-webkit-border-bottom-left-radius: $d;
+				-moz-border-radius: $a $b $c $d;
+				border-radius: $a $b $c $d;
+			}
+		} @else {
+			@if $b == $d {
+				-webkit-border-top-left-radius: $a;
+				-webkit-border-top-right-radius: $b;
+				-webkit-border-bottom-right-radius: $c;
+				-webkit-border-bottom-left-radius: $d;
+				-moz-border-radius: $a $b $c;
+				border-radius: $a $b $c;
+			} @else {
+				-webkit-border-top-left-radius: $a;
+				-webkit-border-top-right-radius: $b;
+				-webkit-border-bottom-right-radius: $c;
+				-webkit-border-bottom-left-radius: $d;
+				-moz-border-radius: $a $b $c $d;
+				border-radius: $a $b $c $d;
+			}
+		}
+	}
+}
+
+@mixin min-screen-width( $width, $orientation : false ) {
+	@if $orientation {
+		@media only screen and ( min-width: #{$width} ) and ( orientation : #{$orientation} ) { @content; }
+	} @else {
+		@media only screen and ( min-width: #{$width} ) { @content; }
+	}
+}
+
+@mixin max-screen-width( $width, $orientation : false ) {
+	@if $orientation {
+		@media only screen and ( max-width: #{$width} ) and ( orientation : #{$orientation} ) { @content; }
+	} @else {
+		@media only screen and ( max-width: #{$width} ) { @content; }
+	}
+}
+
+@mixin min-screen-height( $height, $orientation : false ) {
+	@if $orientation {
+		@media only screen and ( min-height: #{$height} ) and ( orientation : #{$orientation} ) { @content; }
+	} @else {
+		@media only screen and ( min-height: #{$height} ) { @content; }
+	}
+}
+
+@mixin max-screen-height( $height, $orientation : false ) {
+	@if $orientation {
+		@media only screen and ( max-height: #{$height} ) and ( orientation : #{$orientation} ) { @content; }
+	} @else {
+		@media only screen and ( max-height: #{$height} ) { @content; }
+	}
+}
+
+@mixin between-screen-width( $minw, $maxw ) {
+	@media only screen and ( min-width: #{$minw} ) and ( max-width : #{$maxw} ) { @content; }
+}
+
+@mixin boxshadow( $color : #CCC, $width : 3px, $inset : false ){
+	@if $inset {
+		-moz-box-shadow: inset 0 0 $width $color;
+		-webkit-box-shadow: inset 0 0 $width $color;
+		box-shadow: inset 0 0 $width $color;
+	} @else {
+		-moz-box-shadow: 0 0 $width $color;
+		-webkit-box-shadow: 0 0 $width $color;
+		box-shadow: 0 0 $width $color;
+	}
+}
+
+@mixin boxshadowdown( $color : #CCC, $width : 2px){
+	-moz-box-shadow: 0 1px $width $color;
+	-webkit-box-shadow: 0 1px $width $color;
+	box-shadow: 0 1px $width $color;
+}
+@mixin boxshadowup( $color : #CCC, $width : 2px){
+	-moz-box-shadow: 0 -2px $width $color;
+	-webkit-box-shadow: 0 -2px $width $color;
+	box-shadow: 0 -2px $width $color;
+}
+
+@mixin centershadow( $color : #CCC, $width : 3px ){
+	-moz-box-shadow: 0 0 $width $color;
+	-webkit-box-shadow: 0 0 $width $color;
+	box-shadow: 0 0 $width $color;
+}
+
+@mixin textshadow( $color : #CCC, $blur : 0 ){
+	text-shadow: -1px -1px $blur $color, 1px -1px $blur $color, -1px 1px $blur $color, 1px 1px $blur $color;
+}
+
+@mixin filter($var) {
+	-webkit-filter: $var;
+	-moz-filter: $var;
+	-ms-filter: $var;
+	-o-filter: $var;
+	filter: $var;
+}
+
+@mixin nofilter() {
+	-webkit-filter: none;
+	-moz-filter: none;
+	-ms-filter: none;
+	-o-filter: none;
+	filter: none;
+}
+
+@mixin transition( $time : .1s, $type : 'ease-in') {
+	@if $time == none {
+		-webkit-transition: none;
+		-moz-transition: none;
+		-ms-transition: none;
+		-o-transition: none;
+	} @else {
+		-webkit-transition: all $time $type;
+		-moz-transition: all $time $type;
+		-ms-transition: all $time $type;
+		-o-transition: all $time $type;
+	}
+}
+
+@mixin gradient_linear($from : #FFFFFF, $to : #000000) {
+	background-image: -ms-linear-gradient(top, $from 0%, $to 100%);
+	background-image: -moz-linear-gradient(top, $from 0%, $to 100%);
+	background-image: -o-linear-gradient(top, $from 0%, $to 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $from), color-stop(1, $to));
+	background-image: -webkit-linear-gradient(top, $from 0%, $to 100%);
+	background-image: linear-gradient(to bottom, $from 0%, $to 100%);
+}
+
+
+@mixin select_linear($col1 : #FFFFFF, $col2 : #F6F6F6, $col3 : #EEEEEE, $col4 : #F4F4F4) {
+	background-image: -ms-linear-gradient(top, $col1 20%, $col2 50%, $col3 52%, $col4 100%);
+	background-image: -moz-linear-gradient(top, $col1 20%, $col2 50%, $col3 52%, $col4 100%);
+	background-image: -o-linear-gradient(top, $col1 20%, $col2 50%, $col3 52%, $col4 100%);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(20%, $col1), color-stop(50%, $col2 ), color-stop(52%, $col3), color-stop(100%, $col4 ));
+	background-image: -webkit-linear-gradient(top, $col1 20%, $col2 50%, $col3 52%, $col4 100%);
+	background-image: linear-gradient( $col1 20%, $col2 50%, $col3 52%, $col4 100%);
+}
+
+// @mixin webfont ( $name : 'name', $font : 'webfont', $weight : 'normal', $style : 'normal', $src : '/assets' ){
+// 	@font-face {
+// 		font-family: $name;
+// 		src: url('#{$src}/#{$font}.eot');
+// 		src: url('#{$src}/#{$font}.eot?#iefix') format('embedded-opentype'),
+// 		url('#{$src}/#{$font}.woff') format('woff'),
+// 		url('#{$src}/#{$font}.ttf') format('truetype'),
+// 		url('#{$src}/#{$font}.svg##{$name}') format('svg');
+// 		font-weight: $weight;
+// 		font-style: $style;
+// 	}
+// }
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff ttf svg) {
+
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+		);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+		);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+
+}

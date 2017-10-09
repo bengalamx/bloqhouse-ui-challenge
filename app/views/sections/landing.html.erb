@@ -1,0 +1,106 @@
+<header>
+	<div class="container">
+		<%= link_to 'Download', 'https://github.com/ethereum/mist/releases/download/v0.9.1/Mist-macosx-0-9-1.dmg', class: 'download' %>
+		<div class="padding text-center">
+			<div class="content">
+				<%= image_tag('logo.png') %>
+			</div>
+		</div>
+	</div>
+	<%= image_tag('header-triangle.png', class: 'triangle' ) %>
+</header>
+
+<section id="build" class="padding">
+	<div class="container">
+		<div class="content">
+			<h2 class="text-center">Build unstoppable applications</h2>
+			<p>Ethereum is a decentralized platform that runs smart contracts: applications that run exactly as programmed without any possibility of downtime, censorship, fraud or third party interference.</p>
+			<p>These apps run on a custom built blockchain, an enormously powerful shared global infrastructure that can move value around and represent the ownership of property. This enables developers to create markets, store registries of debts or promises, move funds in accordance with instructions given long in the past (like a will or a futures contract) and many other things that have not been invented yet, all without a middle man or counterparty risk.</p>
+			<p>The project was bootstrapped via an ether pre-sale during August 2014 by fans all around the world. It is developed by the Ethereum Foundation, a Swiss nonprofit, with contributions from great minds across the globe.</p>
+		</div>
+	</div>
+	<%= image_tag('build-triangle.png', class: 'triangle triangle-top' ) %>
+	<%= image_tag('build-triangle.png', class: 'triangle triangle-bottom' ) %>
+</section>
+
+<section id="smart">
+	<div class="container">
+		<div class="padding">
+			<div class="content">
+				<div class="row">
+					<div class="col-md-15 col-md-push-9">
+						<%= image_tag('smart-window.png' ) %>
+					</div>
+					<div class="col-md-9 col-md-pull-15">
+						<h2 class="text-center">Smart money, smart wallet</h2>
+						<p>The Ethereum Wallet is a gateway to decentralized applications on the Ethereum blockchain. It allows you to hold and secure ether and other crypto-assets built on Ethereum, as well as write, deploy and use smart contracts.</p>
+						<div class="text-center">
+							<%= link_to 'https://github.com/ethereum/mist/releases/download/v0.9.1/Mist-macosx-0-9-1.dmg', class: 'download' do %>
+							<span>Download</span><br/> Ethereum Wallet for Mac OS X
+							<% end %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<%= image_tag('smart-triangle.png', class: 'triangle triangle-top-left' ) %>
+	<%= image_tag('smart-triangle.png', class: 'triangle triangle-top-right' ) %>
+	<%= image_tag('smart-triangle.png', class: 'triangle triangle-bottom-left' ) %>
+	<%= image_tag('smart-triangle.png', class: 'triangle triangle-bottom-right' ) %>
+</section>
+
+<section id="solidity">
+	<div class="container">
+		<div class="padding">
+			<div class="content">
+				<h2 class="text-center">Learn <strong>Solidity</strong>, a new language for smart contracts</h2>
+				<h3>Design and issue your own cryptocurrency</h3>
+				<p>Create a tradeable digital token that can be used as a currency, a representation of an asset, a virtual share, a proof of membership or anything at all. These tokens use a standard coin API, so your contract will be automatically compatible with any wallet, other contract or exchange also using this standard.</p>
+				<p>The total amount of tokens in circulation can be set to a simple fixed amount or fluctuate based on any programmed ruleset.</p>
+				<h4 class="text-center">You can build a</h4>
+				<div class="builds">
+					<div class="row">
+						<div class="col-md-8 text-center">
+							<%= icon('dollar') %>
+							<h5>Tradeable token with a fixed supply</h5>
+						</div>
+						<div class="col-md-8 text-center">
+							<%= icon('bank') %>
+							<h5>Central bank that can issue money</h5>
+						</div>
+						<div class="col-md-8 text-center">
+							<%= icon('puzzle-piece') %>
+							<h5>Puzzle-based cryptocurrency</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<%= image_tag('solidity-triangle.png', class: 'triangle' ) %>
+</section>
+
+<footer>
+	<div class="padding">
+		<div class="container">
+			<ul class="list-inline">
+				<li><%= link_to icon('book', 'Blog'), 'https://blog.ethereum.org', target: '_blank' %></li>
+				<li><%= link_to icon('twitter', 'Twitter'), 'https://twitter.com/ethereumproject', target: '_blank' %></li>
+				<li><%= link_to icon('youtube', 'Youtube'), 'https://www.youtube.com/user/ethereumproject', target: '_blank' %></li>
+				<li><%= link_to icon('reddit', 'Reddit'), 'https://www.reddit.com/r/ethereum', target: '_blank' %></li>
+				<li><%= link_to icon('gitter', 'Gitter'), 'https://gitter.im/orgs/ethereum/rooms', target: '_blank' %></li>
+				<li><%= link_to icon('github', 'Github'), 'https://github.com/ethereum', target: '_blank' %></li>
+				<li><%= link_to icon('stack-exchange', 'Stack Exchange'), 'https://ethereum.stackexchange.com', target: '_blank' %></li>
+				<li><%= link_to icon('facebook', 'Facebook'), 'https://www.facebook.com/ethereumproject', target: '_blank' %></li>
+				<li><%= link_to icon('meetup', 'Meetup'), 'https://ethereum.meetup.com', target: '_blank' %></li>
+				<li><%= link_to icon('envelope-o', 'Email'), 'mailto:info@ethereum.org', target: '_blank' %></li>
+			</ul>
+
+			<div class="text-center">
+				<p>Ethereum Foundation (Stiftung Ethereum), Zug, Switzerland</p>
+				<p><small>Copyright © 2017 Ethereum Foundation. All Rights Reserved.</small></p>
+			</div>
+		</div>
+	</div>
+</footer>

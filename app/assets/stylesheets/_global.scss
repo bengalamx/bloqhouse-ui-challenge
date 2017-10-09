@@ -1,0 +1,152 @@
+[class|="padding"] {
+	>	h1, > h2, > h3, > h4, > h5, > .h1, > .h2, > .h3, > .h4, > .h5 {
+		&:first-child { margin-top: 0; }
+	}
+	> :last-child { margin-bottom: 0; }
+}
+
+.padding {
+	// padding: 10px;
+	// @include min-screen-width($screen-md) { padding: $grid-gutter; }
+	// @include min-screen-width($screen-lg) { padding: $grid-gutter-width; }
+	padding: $grid-gutter;
+	@include min-screen-width($screen-md) { padding: $grid-gutter-width; }
+}
+
+.padding-bottom-huge {
+	padding-bottom: 14%;
+	@include max-screen-height(900px) { padding-bottom: 10%; }
+	@include max-screen-height(600px) { padding-bottom: 8%; }
+	@include min-screen-width($screen-lg) { padding-bottom: 200px; }
+}
+
+.padding-top-huge {
+	padding-top: 14%;
+	@include max-screen-height(900px) { padding-top: 10%; }
+	@include max-screen-height(600px) { padding-top: 8%; }
+	@include min-screen-width($screen-lg) { padding-top: 200px; }
+}
+
+.padding-y-huge {
+	// height: 100%;
+	padding-top: 14%;
+	padding-bottom: 14%;
+	@include max-screen-height(900px) {
+		padding-top: 10%;
+		padding-bottom: 10%;
+	}
+	@include max-screen-height(600px) {
+		padding-top: 8%;
+		padding-bottom: 8%;
+	}
+	@include min-screen-width($screen-lg) {
+		padding-top: 200px;
+		padding-bottom: 200px;
+	}
+}
+
+.padding-bottom {
+	padding-bottom: 5%;
+	@include max-screen-height(900px) { padding-bottom: 4%; }
+	@include max-screen-height(600px) { padding-bottom: 3%; }
+	@include min-screen-width($screen-lg) { padding-bottom: 70px; }
+	@include max-screen-width($screen-sm) { padding-bottom: 30px; }
+}
+
+.padding-top {
+	padding-top: 5%;
+	@include max-screen-height(900px) { padding-top: 4%; }
+	@include max-screen-height(600px) { padding-top: 3%; }
+	@include min-screen-width($screen-lg) { padding-top: 70px; }
+	@include max-screen-width($screen-sm) { padding-top: 30px; }
+}
+
+.padding-y {
+	@extend .padding-top;
+	@extend .padding-bottom;
+}
+
+.padding-bottom-sm {
+	padding-bottom: 4%;
+	@include max-screen-height(900px) { padding-bottom: 3%; }
+	@include max-screen-height(600px) { padding-bottom: 2%; }
+	@include min-screen-width($screen-lg) { padding-bottom: 50px; }
+	@include max-screen-width($screen-sm) { padding-bottom: 30px; }
+}
+
+.padding-top-sm {
+	padding-top: 4%;
+	@include max-screen-height(900px) { padding-top: 3%; }
+	@include max-screen-height(600px) { padding-top: 2%; }
+	@include min-screen-width($screen-lg) { padding-top: 50px; }
+	@include max-screen-width($screen-sm) { padding-top: 30px; }
+}
+
+.padding-y-sm {
+	@extend .padding-top-sm;
+	@extend .padding-bottom-sm;
+}
+
+.padding-sm {
+	padding: 5px;
+	@include min-screen-width($screen-md) { padding: $grid-gutter-width/4; }
+	@include min-screen-width($screen-lg) { padding: $grid-gutter; }
+}
+
+.padding-bottom-xs {
+	padding-bottom: 2%;
+	@include max-screen-height(900px) { padding-bottom: 1.5%; }
+	@include max-screen-height(600px) { padding-bottom: 1%; }
+	@include min-screen-width($screen-lg) { padding-bottom: 30px; }
+	@include max-screen-width($screen-sm) { padding-bottom: 30px; }
+}
+
+.padding-top-xs {
+	padding-top: 2%;
+	@include max-screen-height(900px) { padding-top: 1.5%; }
+	@include max-screen-height(600px) { padding-top: 1%; }
+	@include min-screen-width($screen-lg) { padding-top: 30px; }
+	@include max-screen-width($screen-sm) { padding-top: 30px; }
+}
+
+.padding-y-xs {
+	@extend .padding-top-xs;
+	@extend .padding-bottom-xs;
+}
+
+.padding-modal {
+	padding: $grid-gutter;
+	@include min-screen-width($screen-lg) { padding: $grid-gutter-width; }
+	h1, h2 { margin-top: 0; }
+	> :last-child { margin-bottom: 0; }
+
+}
+
+.margin-bottom {
+	margin-bottom: 4%;
+	@include max-screen-height(900px) { margin-bottom: 3%; }
+	@include max-screen-height(600px) { margin-bottom: 2%; }
+	@include min-screen-width($screen-lg) { margin-bottom: 50px; }
+}
+
+.margin-bottom-sm {
+	margin-bottom: 3%;
+	@include max-screen-height(900px) { margin-bottom: 2%; }
+	@include max-screen-height(600px) { margin-bottom: 1%; }
+	@include min-screen-width($screen-lg) { margin-bottom: 30px; }
+}
+
+.padding-top-small {
+	padding-top: 50px;
+	@include max-screen-width($screen-lg) {
+		padding-top: 30px;
+	}
+	@include max-screen-width($screen-md) {
+		padding-top: 20px;
+	}
+	@include max-screen-width($screen-sm) {
+		padding-top: 10px;
+	}
+}
+
+.pading-no { padding: 0; }
